@@ -362,9 +362,10 @@
   /* Responsive nav for small screen */
   @media (max-width: 768px) {
     nav {
-      flex-direction: column;
-      align-items: flex-start; /* ← this makes items align to left */
-      padding: 1.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem;
     }
   
     .hamburger {
@@ -372,7 +373,6 @@
       font-size: 2rem;
       cursor: pointer;
       color: white;
-      margin-top: 0.5rem;
     }
   
     #nav-links {
@@ -389,13 +389,8 @@
     #nav-links.show {
       display: flex;
     }
-  
-    #nav-links li a {
-      color: #f06595;
-      padding: 0.5rem 0;
-      font-weight: bold;
-    }
   }
+  
   
   
   /* Mobile specific */
