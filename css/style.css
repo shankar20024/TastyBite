@@ -113,17 +113,16 @@ nav {
   border-radius: 0 0 12px 12px;
 }
 .main-navIndex {
-  position: relative;
+  position:absolute;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(to right, #ff6b6b, #f06595);
   z-index: 1000;
   border-radius: 0 0 12px 12px;
 }
-
 /* For mobile responsiveness */
 @media (max-width: 768px) {
   .hamburger {
