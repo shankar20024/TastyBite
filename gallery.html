@@ -1,0 +1,45 @@
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - TastyBite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="subpage-header">
+    <nav>
+        <h1>TastyBite</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      
+    <h2>Our Gallery</h2>
+  </header>
+
+  <section class="gallery-section">
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Food 1" />
+      <img src="images/gallery2.jpg" alt="Food 2" />
+      <img src="images/gallery3.jpg" alt="Food 3" />
+      <img src="images/gallery4.jpg" alt="Food 4" />
+      <img src="images/gallery5.jpg" alt="Food 5" />
+      <img src="images/gallery6.jpg" alt="Food 6" />
+    </div>
+  </section>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

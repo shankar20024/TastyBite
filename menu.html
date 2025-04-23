@@ -1,0 +1,66 @@
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - TastyBite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="subpage-header">
+    <nav>
+        <h1>TastyBite</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      
+    <h2>Our Menu</h2>
+  </header>
+
+  <section class="menu-section">
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="images/pizza.jpg" alt="Pizza" />
+        <h3>Cheesy Pizza</h3>
+        <p>₹249</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/burger.jpg" alt="Burger" />
+        <h3>Veg Burger</h3>
+        <p>₹149</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/pasta.jpg" alt="Pasta" />
+        <h3>White Sauce Pasta</h3>
+        <p>₹199</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/momo.jpg" alt="Momo" />
+        <h3>Steamed Momos</h3>
+        <p>₹99</p>
+        <a href="#" class="btn">Order Now</a>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

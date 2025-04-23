@@ -1,0 +1,52 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - TastyBite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="subpage-header">
+    <nav>
+        <h1>TastyBite</h1>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      
+    <h2>About Us</h2>
+  </header>
+
+  <section class="about-content">
+    <div class="container">
+      <h3>Welcome to TastyBite</h3>
+      <p>
+        At TastyBite, we believe in the magic of food. Our mission is to bring
+        joy to your taste buds with every bite. From traditional flavors to
+        modern fusions, our chefs curate a delightful menu to satisfy every craving.
+      </p>
+      <p>
+        Started in 2023, TastyBite has become a go-to spot for food lovers looking
+        for quality, freshness, and unforgettable taste experiences. Whether you're dining in or ordering online, we ensure a flavorful journey.
+      </p>
+      <p>
+        Come visit us and taste the difference!
+      </p>
+    </div>
+  </section>
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>

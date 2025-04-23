@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - TastyBite</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="subpage-header">
+    <nav>
+      <h1>TastyBite</h1>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <h2>Contact Us</h2>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h3>We'd love to hear from you!</h3>
+      <form id="contact-form" action="https://formspree.io/f/xblojajp" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="number" name="contact" placeholder="Your Phone No." required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div id="form-message" style="margin-top: 1rem; font-weight: 500;"></div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Form Message & Hamburger Toggle -->
+  <script>
+    // Hamburger menu toggle
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+
+    // Contact form handling
+    const form = document.getElementById("contact-form");
+    const messageBox = document.getElementById("form-message");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault(); // Stop page reload
+
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+  messageBox.innerText = "🙏 Thank you! Your message has been received.";
+  messageBox.style.color = "#f06595";
+  messageBox.style.backgroundColor = "#fff0f5";
+  messageBox.style.padding = "1rem";
+  messageBox.style.border = "1px solid #f06595";
+  messageBox.style.borderRadius = "8px";
+  setTimeout(() => {
+  messageBox.innerText = "";
+  messageBox.style = "";
+}, 6000);
+
+  form.reset();
+} else {
+  messageBox.innerText = "❌ Oops! Something went wrong. Please try again.";
+  messageBox.style.color = "#b00020";
+  messageBox.style.backgroundColor = "#ffeaea";
+  messageBox.style.border = "1px solid #b00020";
+  messageBox.style.padding = "1rem";
+  messageBox.style.borderRadius = "8px";
+  setTimeout(() => {
+  messageBox.innerText = "";
+  messageBox.style = "";
+}, 6000);
+
+}
+
+    });
+  </script>
+
+</body>
+</html>
